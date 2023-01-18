@@ -1,4 +1,4 @@
-﻿# Get a list of all virtual machines on the host
+﻿# Get a list of all virtual machines with errored replication on the host
 $VMs = Measure-VMreplication | where {$_.Health -eq 'Warning' -or $_.Health -eq 'Critical'} | Select-Object Name,State,Health,LastReplicationTime
 
 
