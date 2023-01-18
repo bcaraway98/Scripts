@@ -2,7 +2,7 @@
 $VMs = Measure-VMreplication | where {$_.Health -eq 'Warning' -or $_.Health -eq 'Critical'} | Select-Object Name,State,Health,LastReplicationTime
 
 
-# Set the SMTP server and port for sending emails
+# Set the SMTP server for sending emails
 $SMTPServer = "smtp-server.com"
 
 
